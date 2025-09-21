@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon ./dist/server.js",
     "prod": "cross-env NODE_ENV=production nodemon ./dist/server.js",
-    "start": "node ./dist/server.js"
+    "start": "node ./server.js"
   },
   "keywords": [],
   "author": "",
