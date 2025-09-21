@@ -1,3 +1,46 @@
+/* Tailwind Base */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .bannerCard {
+    @apply bg-gray-800 text-slate-100 hover:bg-gray-700 border border-gray-700;
+  }
+  .darkClass {
+    @apply bg-gray-900 text-slate-100;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important; /* لون الخلفية */
+  -webkit-text-fill-color: #000 !important; /* لون النص */
+}
+tr {
+  text-align: center !important;
+}
+th,
+td {
+  border: 1px solid #ccc !important;
+}
+
+/* Smooth scroll */
+* {
+  scroll-behavior: smooth;
+}
+
+/* 🔹 خليك مع arrows الافتراضية وخليهن يبينوا بوضوح */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000 !important; /* اللون أسود */
+  font-size: 20px !important; /* حجم السهم */
+  font-weight: bold;
+}
+
+/* حرّك الأسهم شوي لحتى ما يلزقوا بالمحتوى */
+.swiper-button-prev {
+  left: 30px !important;
+}
+.swiper-button-next {
+  right: 30px !important;
+}

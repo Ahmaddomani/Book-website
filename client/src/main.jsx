@@ -1,15 +1,23 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import { BrowserRouter } from "react-router-dom";
-import { UserProvider } from "./context/UserContext.jsx";
+import { BrowserRouter } from "react-router";
+import {
+  BookProvider,
+  LoginProvider,
+  PageProvider,
+} from "./context/BooksContext.jsx"; // Import your Book context provider
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
-      <UserProvider>
-        <App />
-      </UserProvider>
-    </BrowserRouter>
+    <LoginProvider>
+      <BrowserRouter>
+        <PageProvider>
+          <BookProvider>
+            <App />
+          </BookProvider>
+        </PageProvider>
+      </BrowserRouter>
+    </LoginProvider>
   </StrictMode>
 );
